@@ -303,6 +303,20 @@
   }
   .lightbox-dots span.active { background: white; }
 
+  /* VENDIDO */
+  .card.sold { opacity: 0.65; }
+  .card.sold .card-gallery::after {
+    content: 'VENDIDO';
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%) rotate(-12deg);
+    background: rgba(185, 28, 28, 0.88);
+    color: white; font-size: 1.3rem; font-weight: 800;
+    letter-spacing: 0.12em; padding: 8px 22px;
+    border-radius: 4px; z-index: 10; pointer-events: none;
+    white-space: nowrap;
+  }
+  .card.sold .price { text-decoration: line-through; color: var(--text-muted); }
+
   @media (max-width: 600px) {
     .grid { grid-template-columns: 1fr 1fr; gap: 12px; }
     .hero { padding: 40px 20px 36px; }
@@ -388,7 +402,7 @@
       </div>
     </div>
 
-    <div class="card" data-cat="bebe">
+    <div class="card sold" data-cat="bebe">
       <div class="card-gallery" onclick="openLightbox(this)">
         <img src="biblioteca_montessori_01.jpg" class="active" alt="Biblioteca Montessori">
         <button class="gallery-nav prev" onclick="event.stopPropagation();galleryNav(this,-1)">&#8249;</button>
@@ -418,7 +432,7 @@
       </div>
     </div>
 
-    <div class="card" data-cat="bebe">
+    <div class="card sold" data-cat="bebe">
       <div class="card-gallery" onclick="openLightbox(this)">
         <img src="juego_mesa_sillas_ninos_02.jpg" class="active" alt="Mesa y sillas">
         <img src="juego_mesa_sillas_ninos_03.jpg" alt="Mesa y sillas">
@@ -467,7 +481,7 @@
       </div>
     </div>
 
-    <div class="card" data-cat="bebe">
+    <div class="card sold" data-cat="bebe">
       <div class="card-gallery" onclick="openLightbox(this)">
         <img src="torre_aprendizaje_01.jpg" class="active" alt="Torre de aprendizaje">
         <img src="torre_aprendizaje_02.jpg" alt="Torre de aprendizaje">
@@ -506,7 +520,7 @@
   <div class="section-title">&#x1F3E0; Hogar y Muebles</div>
   <div class="grid">
 
-    <div class="card" data-cat="hogar">
+    <div class="card sold" data-cat="hogar">
       <div class="card-gallery" onclick="openLightbox(this)">
         <img src="escritorio_02.jpg" class="active" alt="Escritorio">
         <img src="escritorio_03.jpg" alt="Escritorio">
@@ -556,7 +570,7 @@
       </div>
     </div>
 
-    <div class="card" data-cat="hogar">
+    <div class="card sold" data-cat="hogar">
       <div class="card-gallery" onclick="openLightbox(this)">
         <img src="zapatero_vertical_01.jpg" class="active" alt="Zapatero vertical">
         <img src="zapatero_vertical_02.jpg" alt="Zapatero vertical">
@@ -621,7 +635,7 @@
       </div>
     </div>
 
-    <div class="card" data-cat="hogar">
+    <div class="card sold" data-cat="hogar">
       <div class="card-gallery" onclick="openLightbox(this)">
         <img src="perchero_industrial_01.jpg" class="active" alt="Perchero industrial">
         <img src="perchero_industrial_02.jpg" alt="Perchero industrial">
@@ -638,7 +652,7 @@
       </div>
     </div>
 
-    <div class="card" data-cat="hogar">
+    <div class="card sold" data-cat="hogar">
       <div class="card-gallery" onclick="openLightbox(this)">
         <img src="lampara_pie_01.jpg" class="active" alt="Lámpara de pie">
         <button class="gallery-nav prev" onclick="event.stopPropagation();galleryNav(this,-1)">&#8249;</button>
@@ -698,7 +712,7 @@
       </div>
     </div>
 
-    <div class="card" data-cat="exterior">
+    <div class="card sold" data-cat="exterior">
       <div class="card-gallery" onclick="openLightbox(this)">
         <img src="guitarra_01.jpg" class="active" alt="Guitarra Yamaha">
         <img src="guitarra_02.jpg" alt="Guitarra Yamaha">
@@ -736,7 +750,7 @@
       </div>
     </div>
 
-    <div class="card" data-cat="exterior">
+    <div class="card sold" data-cat="exterior">
       <div class="card-gallery" onclick="openLightbox(this)">
         <img src="caloventor_wurden_01.jpg" class="active" alt="Caloventor Wurden">
         <img src="caloventor_wurden_02.jpg" alt="Caloventor Wurden">
